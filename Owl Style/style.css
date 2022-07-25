@@ -1,0 +1,109 @@
+body {
+  	background-color: burlywood;
+  	font-family:  Georgia, serif;
+  	font-size: 16px;
+}
+
+/* catchall to prevent overflow*/
+img, embed, 
+object, video {
+	max-width: 100%;
+}
+
+/*this is the flexbox container */
+.big_container {
+	border:  5px solid peru;
+	background-color: antiquewhite;
+	padding:  5px;
+	margin: auto;
+	width: 50%;
+	border-radius: 10px;
+	box-shadow: 5px 10px saddlebrown;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* first item in flexbox container - contains program_name*/
+.card_title {
+	width: 50%;
+	text-align: center;
+}
+/*header text containing program name*/
+#program_name{
+	margin-bottom: 0px;
+}
+/* second item in flexbox container */
+.card_desc {
+	width: 50%;
+	font-style: italic;
+	text-align: center;
+}
+/* third item in flexbox container - contains img_box and wisdom*/
+.pearl_container {
+	/*border:  5px solid saddlebrown;*/
+	background-color: moccasin;
+	box-shadow: 5px 10px peru;
+	padding: 15px;
+	width: 45%;
+	border-radius: 10px;
+	margin: 20px;
+}
+
+.img_box {
+	width: 100%;
+}
+/*image in img_box inside pearl_container*/
+#owl {
+	width: 85%;
+	display: block;
+	margin: auto;
+}
+/*randomly selected pearl of wisdom*/
+#wisdom {
+	font-weight: bold;
+	text-align: center;
+}
+
+/* fourth item in flexbox container */
+.button_box {
+	width: 45%;
+  text-align: center;
+}
+
+.button {
+  border: 2px solid saddlebrown;
+  background-color: burlywood;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  min-width: 50px;
+  /*buttons should be at least 48 x 48 */ 
+}
+
+.button:hover {
+	background-color: saddlebrown;
+	color: blanchedalmond;
+}
+/*fifth item in flexbox container - becomes visible after button is clicked*/
+#reminder {
+	width: 50%;
+	visibility: hidden;
+	font-style: italic;
+	text-align: center;
+
+}
+	/*prevent text overflow on tiny screens*/
+@media screen and (max-width: 300px) {
+	.card_title, #wisdom {
+		max-width: 100%;
+		font-size: .8em;
+	}
+}

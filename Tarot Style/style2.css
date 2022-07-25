@@ -1,0 +1,114 @@
+body {
+  	background-color: darkolivegreen;
+  	color: darkslategrey;
+	font-family: Hoefler Text,Baskerville Old Face,Garamond,Times New Roman,serif; 
+  	font-size: 18px;
+}
+
+/* catchall to prevent overflow*/
+img, embed, 
+object, video {
+	max-width: 100%;
+}
+
+/*this is the flexbox container */
+.big_container {
+	//border:  5px solid crimson;
+	background-color: lightcoral;
+	padding:  5px;
+	margin: auto;
+	width: 50%;
+	border-radius: 10px;
+	box-shadow: 5px 10px darkslategrey;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* first item in flexbox container - contains program_name*/
+.card_title {
+	width: 50%;
+	text-align: center;
+}
+/*header text containing program name*/
+#program_name{
+	margin-bottom: 0px;
+}
+/* second item in flexbox container */
+.card_desc {
+	width: 50%;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+}
+/* third item in flexbox container - contains img_box and wisdom*/
+.pearl_container {
+	background-color: indianred;
+	box-shadow: 5px 10px darkolivegreen;
+	padding: 15px;
+	width: 45%;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.img_box {
+	width: 100%;
+}
+/*image in img_box inside pearl_container*/
+#tarot_card {
+	width: 60%;
+	display: block;
+	margin: auto;
+}
+/*randomly selected pearl of wisdom*/
+#wisdom {
+	font-weight: bold;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+.button_box {
+	width: 45%;
+	text-align: center;
+}
+
+.button {
+  border: 2px solid crimson;
+  background-color: darkkhaki;
+  color: darkslategrey;
+  font-weight: bold;
+  padding: 16px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 4px;
+  margin-left: 2px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  min-width: 50px;
+  /*buttons should be at least 48 x 48 */ 
+}
+
+.button:hover {
+	background-color: darkolivegreen;
+	color: moccasin;
+}
+}
+/*fifth item in flexbox container - becomes visible after button is clicked*/
+#reminder {
+	width: 50%;
+	visibility: hidden;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+}
+	/*prevent text overflow on tiny screens*/
+@media screen and (max-width: 300px) {
+	.card_title, #wisdom {
+		max-width: 100%;
+		font-size: .8em;
+	}
+}
